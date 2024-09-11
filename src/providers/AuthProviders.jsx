@@ -57,6 +57,7 @@ const AuthProviders = ({ children }) => {
           .then((res) => {
             if (res.data.token) {
               localStorage.setItem("access-token", res.data.token);
+              setLoading(false);
             }
           })
           .catch((error) => {
@@ -66,8 +67,9 @@ const AuthProviders = ({ children }) => {
       } else {
         console.log('User is null, removing access-token');
         localStorage.removeItem("access-token");
+        setLoading(false);
       }
-      setLoading(false);
+      
     });
     return () => unSubscribe();
   }, [axiosPublic]);

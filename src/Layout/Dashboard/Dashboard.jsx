@@ -2,6 +2,7 @@ import React from "react";
 import {
   FaAd,
   FaAlignLeft,
+  FaChalkboard,
   FaGgCircle,
   FaHome,
   FaRegWindowMaximize,
@@ -27,7 +28,7 @@ const Dashboard = () => {
           
           <ul>
           <li className="">
-            <Link to="dashboard/admin-home">
+            <Link to="admin-home">
               <span className="flex items-center gap-2 font-medium text-white">
               <MdAddHomeWork /> Admin Home
               </span>
@@ -76,6 +77,13 @@ const Dashboard = () => {
             <Link to="reservation">
               <span className="flex items-center gap-2 font-medium text-white">
                 <FaRegWindowMaximize /> Reservation
+              </span>
+            </Link>
+          </li>
+          <li className="mt-2">
+            <Link to="payment-history">
+              <span className="flex items-center gap-2 font-medium text-white">
+              <FaChalkboard />     Payment History
               </span>
             </Link>
           </li>

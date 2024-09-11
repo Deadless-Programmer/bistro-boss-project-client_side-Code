@@ -98,6 +98,8 @@ const AddItems = () => {
           </div>
         </div>
       </form>
+
+      
     </div>
   );
 };
